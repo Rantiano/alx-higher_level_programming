@@ -39,7 +39,7 @@ class Base:
             list_objs = [o.to_dictionary() for o in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(list_objs))
-    
+
     @classmethod
     def create(cls, **dictionary):
         '''Loads instance from dictionary.'''
